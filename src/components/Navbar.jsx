@@ -1,10 +1,35 @@
-import React from 'react';
-import { logo } from '../assets';  // Correctly import logo
+import { Link, NavLink } from 'react-router-dom';
+import { useContext, useState } from 'react';
 
 const Navbar = () => {
+  const [visible, setVisible] = useState(false);
+
   return (
-    <div className="absolute bottom-10 right-10 flex items-center p-6 bg-blue-500 rounded-lg shadow-lg">
-      <img src={logo} alt="Scraplink Logo" className="w-36" /> {/* Use logo directly */}
+    <div className="flex items-center justify-between py-5 font-medium">
+      <Link to="/">
+        {/* <img src={assets.logo} alt="logo" className="w-36" /> */}
+      </Link>
+
+      <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
+        <NavLink to="/" className="flex flex-col items-center gap-1">
+          <p>HOME</p>
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+        </NavLink>
+        <NavLink to="/collection" className="flex flex-col items-center gap-1">
+          <p>COLLECTION</p>
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+        </NavLink>
+        <NavLink to="/about" className="flex flex-col items-center gap-1">
+          <p>ABOUT</p>
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+        </NavLink>
+        <NavLink to="/contact" className="flex flex-col items-center gap-1">
+          <p>CONTACT</p>
+          <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+        </NavLink>
+      </ul>
+
+     
     </div>
   );
 };

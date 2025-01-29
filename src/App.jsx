@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Login from './login'
 import Dashboard from './Dashboard';
 import Collection from './pages/Collection';
 import Contact from './pages/Contact'; // Corrected import for Contact
@@ -26,6 +27,7 @@ function App() {
         <Route path='/llogin' element={<Llogin />} />
         <Route path='/place-order' element={<Placeorder />} />
         <Route path='/orders' element={<Orders />} />
+        <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </div>

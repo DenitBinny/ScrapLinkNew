@@ -29,7 +29,7 @@ const Login = () => {
     setIsLoginPage(!isLoginPage); 
   };
 
-  // Password Validation Logic
+  // Password Validation Logictll
   const validatePassword = (password) => {
     const passwordRegex = /[a-zA-Z]/;  // Ensures at least one letter is present
     if (password.length < 6) {
